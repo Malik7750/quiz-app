@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuesioner Tingkat Depresi Lansia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Inventaris Depresi Beck (IDB)</h3>
+        <h5>a.	Alat pengukur status efektif digunakan untuk membedakan Tingkat depresi yang mempengaruhi suasana hati.</h5>
+        <h5>b.	Berisikan 21 karakteristik : alam perasaan, pesimisme, rasa kegagalan, kepuasan, rasa bersalah, rasa terhukum, kekecewaan terhadap seseorang, kekerasan terhadap diri sendiri, keinginan untuk menghukum diri sendiri, keinginan untuk menangis, mudah tersinggung, menarik diri, ketidakmampuan membuat keputusan, gambaran tubuh, gangguan tidur, kelelahan, gangguan selera makan, kehilangan berat badan.</h5>
+        <h5>c.	Berisikan 15 hal tentang gejala dan sikap yang berhubungan dengan depresi.</h5>
+        <h1>Kuesioner Tingkat Depresi Lansia</h1>
+        <form id="depressionForm">
+            <!-- Informasi Klien -->
+            <label for="clientName">Nama klien:</label>
+            <input type="text" id="clientName" required>
+
+            <label for="birthdate">Tanggal Lahir:</label>
+            <input type="date" id="birthdate" required>
+
+            <label for="gender">Jenis Kelamin:</label>
+            <select id="gender" required>
+                <option value="male">Laki-laki</option>
+                <option value="female">Perempuan</option>
+            </select>
+
+            <label for="religion">Agama:</label>
+            <input type="text" id="religion" required>
+
+            <label for="status">Status:</label>
+            <input type="text" id="status" required>
+
+            <!-- Pertanyaan Depresi -->
+            <h2>Pertanyaan:</h2>
+            <div class="questions-container" id="questionsContainer">
+                <!-- Pertanyaan dan opsi akan diisi oleh JavaScript -->
+            </div>
+
+            <button type="button" onclick="calculateDepression()">Hitung Tingkat Depresi</button>
+        </form>
+
+        <!-- Hasil -->
+        <div id="resultContainer" class="result-container">
+            <h2>Hasil</h2>
+            <p id="interpretation">Interpretasi akan muncul di sini.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
